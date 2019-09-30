@@ -15,11 +15,19 @@ def hello_world():
 def index():
     #return render_template('index.html')
     return render_template("index.html", info=info['info'])
+    
 
-
-@app.route('/about')
+@app.route('/about', methods=['GET', 'POST'])
 def about():
-    return render_template('about.html', info=info['info'])
+    
+    return redirect("http://localhost:5000/#about")
+    #return render_template("about.html", info=info['info'])
+
+
+@app.route('/academic', methods=['GET', 'POST'])
+def aca():
+
+    return redirect("http://localhost:5000/#academic")
 
 
 if __name__ == '__main__':
