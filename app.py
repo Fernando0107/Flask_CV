@@ -14,7 +14,7 @@ def hello_world():
 @app.route('/')
 def index():
     #return render_template('index.html')
-    return render_template("index.html")
+    return render_template("index.html", info=info['info'])
 
 
 @app.route('/about')
