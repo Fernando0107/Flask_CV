@@ -1,10 +1,15 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, redirect
 import yaml
+import os
+import optparse
+
+developer = os.getenv("DEVELOPER", "Me")
+environment = os.getenv("ENVIRONMENT", "development")
 
 app = Flask(__name__)
 
 info = yaml.load(open('info.yml', 'r'))
-
+infoAc = yaml.load(open('infoA.yml', 'r'))
 
 @app.route('/info')
 def hello_world():
@@ -14,8 +19,8 @@ def hello_world():
 @app.route('/')
 def index():
     #return render_template('index.html')
-    return render_template("index.html", info=info['info'])
-    
+    return render_template("index.html", info=info['info'], developer=developer, infoAc=infoAc['infoA'])
+
 
 @app.route('/about', methods=['GET', 'POST'])
 def about():
