@@ -1,2 +1,2 @@
-# Flask_CV-
+# Flask_CV
 CV with Flask!
