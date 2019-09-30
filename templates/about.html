@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block content %}
+<!-- About Section -->
+  <section class="page-section bg-primary text-white mb-0" id="about">
+    <div class="container">
+
+      <!-- About Section Heading -->
+      <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+
+      <!-- Icon Divider -->
+      <div class="divider-custom divider-light">
+        <div class="divider-custom-line"></div>
+        <div class="divider-custom-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="divider-custom-line"></div>
+      </div>
+
+      <!-- About Section Content -->
+      <div class="row">
+        <div class>
+          <p class="lead">Hello World! My name is Fernando Gonzalez, I'm 20 years old, I live in Guatemala City, and I'm the youngest of my family. I'm studying Computer Science in University Francisco Marroquin, here in Guatemala, and it's the 3rd year of my carreer. Sports, videogames, coding, technology, family and friends... those are the most impotant thing in my life, or at least, 
+          the things I enjoy the most. I'm a big fan of Real Madrid Soccer team, and one of my dreams, is to travel to Madrid, Spain and go to watch a soccer game on Santiago Bernabeu Stadium. I'm in a relationship with Carol Castillo, and all I can say, is that I can't imagine a life without her. I also have a pet, and my pet's name is Jack, he is a Pug and it's a very funny and sleepy dog.
+          Now, my family, my father's name is Fernando Gonzalez (Yeah, now you know how I got this name), my Mother's name is Alicia Diaz and my sister's names is Carolina Gonzalez. I love to play videogames, and some of my favorite videogames are FIFA, Shadow of the Colossuss, Spiderman, Batman and AC.x</p>
+        </div>
+        <div>
+          <p class="lead"></p>
+        </div>
+      </div>
+
+      <ul class="list-group">
+          {% for i in range(6) %}
+              {% for name,age in info[i].items()%}
+                  <li class="list-group-item">
+                      <p style="color:black;">{{name}}:</p><span width="150" height="150" class="badge badge-pill badge-primary">{{age}}</span>
+                  </li>
+              {% endfor %}
+          {% endfor %}
+      </ul>
+
+
+    </div>
+  </section>
+
+{% endblock content %}
