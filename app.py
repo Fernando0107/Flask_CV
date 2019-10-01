@@ -39,7 +39,7 @@ def aca():
 @app.route('/work', methods=['GET'])                #En esta ruta, se podra ver mi experiencia laboral 
 def work():
 
-    return redirect("http://localhost:5000/#Work")
+    return redirect("http://localhost:5000/#Work")          #La verdad, no he trabajado jajaja Solo dejare uno de prueba
 
 
 if __name__ == '__main__':
